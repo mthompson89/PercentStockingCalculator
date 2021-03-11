@@ -5,7 +5,7 @@ This code also implements and modifies Ducey & Knapp (2010) relative density fun
 When Citing please cite:
 
 Michael C. Thompson, Percent Stocking Calculator, (2021), Github repository, 
-https://doi.org/10.5281/zenodo.4596917
+https://doi.org/10.5281/zenodo.4599613
 
 First reading in libraries needed for the following code, as well as the function used to calculate a-line or b-line. I decided to change from three different functions to a single function that you can just change percent stocking to calculate what ever line you want. 
 
