@@ -61,7 +61,7 @@ df2 <- df1%>%
          )
 df2
 ```
-references:
-Ducey, M. J., & Knapp, R. A. (2010). Rapid assessment of relative density in mixed-species stands of the northeastern United States. International Journal of Forestry Research, 2010.
-Gingrich, S. F. (1967). En Measuring and evaluating stocking and density in upland hardwood forest in the Central States (págs. 69-80). For. Sci.
+<p>references:</p>
+<p>Ducey, M. J., & Knapp, R. A. (2010). Rapid assessment of relative density in mixed-species stands of the northeastern United States. International Journal of Forestry Research, 2010.</p>
+<p>Gingrich, S. F. (1967). En Measuring and evaluating stocking and density in upland hardwood forest in the Central States (págs. 69-80). For. Sci.</p>
 
