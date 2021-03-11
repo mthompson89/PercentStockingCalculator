@@ -6,7 +6,7 @@ in order to calculate the percent stocking level.
 When Citing please cite:
 
 Michael C. Thompson, Percent Stocking Calculator, (2021), Github repository, 
-https://doi.org/10.5281/zenodo.4596762
+https://doi.org/10.5281/zenodo.4596917
 
 First reading in libraries needed for the following code, as well as the function used to calculate a-line or b-line. I decided to change from three different functions to a single function that you can just change percent stocking to calculate what ever line you want. 
 
