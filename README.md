@@ -1,24 +1,19 @@
 # Gingrich Stocking Line Calculator
 This code is used to take an output from FVS and calculate the A line, B line and C line (percent stocking level) used in Gingrich Stocking Charts (Ginrich 1967).
-This code also implements and modifies Knapp and Ducey (2018) relative density function
+This code also implements and modifies Knapp and Ducey (2010) relative density function
 in order to calculate the percent stocking level.
 
 When Citing please cite:
 
-Michael C, Thompson (2021) Github repository, 
+Michael C. Thompson, Percent Stocking Calculator, (2021), Github repository, 
 https://doi.org/10.5281/zenodo.4596762
 
----
-title: "Aline_Bline_Calculator"
-author: "Michael Thompson"
-date: "2/12/2021"
-output: html_document
----
 First reading in libraries needed for the following code, as well as the function used to calculate a-line or b-line. I decided to change from three different functions to a single function that you can just change percent stocking to calculate what ever line you want. 
 
 ```{r setup, include=TRUE, message=FALSE}
 library(tidyverse) #needed for read_csv()
 library(dplyr)     #needed for using the %>% (pipe) opperators
+
 X_lineBA <- function(DBH, SG, x){
   a = 0.00015# constants from Ducey&knapp 2010 relative density measure
   b = 0.00218 # constants from Ducey&knapp 2010 relative density measure
@@ -34,15 +29,6 @@ Read in the FVS output file and specific Gravity reference file using `read_csv(
 ```{r}
 FVS_SampleOutput <- read_csv("F:/AFRI Grant/DegCalc/FVS_SampleOutput.csv", col_types = "ffifnnnnnnnni")
 SG_ref <- read_csv("F:/AFRI Grant/DegCalc/SG_ref.csv", col_types = "ffnn")
-```
-
-these first two lines could be skipped depending on your FVS output but because the sample output above had some species as plantID codes rather than FIA codes
-I just make a quick vector of the plant ID codes I don't want and then use them to remove those rows from my dataset.
-alternatively you could write a for loop and check each entery to see if it is a plant id code, if yes, replace it with appropriate FIA code.
-
-```{r}
-removedSp <- c("ACSA3","FAGR","TSCA","PIRU","BEAL2","ACRU","ABBA","ACPE")
-FVS_SampleOutput <- FVS_SampleOutput[!grepl(paste(removedSp, collapse="|"), FVS_SampleOutput$Species),]
 ```
 
 Removes any leading zeros from the specific gravity reference species list so that they match each othe for a joining later
