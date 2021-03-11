@@ -1,6 +1,6 @@
 # Gingrich Stocking Line Calculator
 This code is used to take an output from FVS and calculate the A line, B line and C line (percent stocking level) used in Gingrich Stocking Charts (Ginrich 1967).
-This code also implements and modifies Knapp and Ducey (2010) relative density function
+This code also implements and modifies Ducey & Knapp (2010) relative density function
 in order to calculate the percent stocking level.
 
 When Citing please cite:
@@ -61,3 +61,7 @@ df2 <- df1%>%
          )
 df2
 ```
+references:
+Ducey, M. J., & Knapp, R. A. (2010). Rapid assessment of relative density in mixed-species stands of the northeastern United States. International Journal of Forestry Research, 2010.
+Gingrich, S. F. (1967). En Measuring and evaluating stocking and density in upland hardwood forest in the Central States (págs. 69-80). For. Sci.
+
