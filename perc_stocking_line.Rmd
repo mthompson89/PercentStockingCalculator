@@ -8,7 +8,7 @@ First reading in libraries needed for the following code, as well as the functio
 
 ```{r setup, include=TRUE, message=FALSE}
 library(tidyverse) #needed for read_csv()
-library(dplyr)     #needed for using the %>% (pipe) opperators
+library(dplyr)     #needed for using the %>% (pipe) operators
 
 
 X_lineBA <- function(DBH, SG, x){
